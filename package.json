@@ -1,0 +1,35 @@
+{
+  "name": "virtual-ai-assistant",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-stack Virtual AI Assistant with React, Vite, Express, TypeScript, Prisma, and Anthropic Claude streaming",
+  "scripts": {
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "install:server": "npm --prefix server install",
+    "install:client": "npm --prefix client install",
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue,green\" \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "build": "npm --prefix server run build && npm --prefix client run build",
+    "build:server": "npm --prefix server run build",
+    "build:client": "npm --prefix client run build",
+    "db:migrate": "npm --prefix server run prisma:migrate",
+    "db:generate": "npm --prefix server run prisma:generate",
+    "db:studio": "npm --prefix server run prisma:studio",
+    "test": "npm --prefix server run test"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "keywords": [
+    "ai-assistant",
+    "claude",
+    "react",
+    "express",
+    "typescript",
+    "prisma",
+    "sse"
+  ],
+  "author": "",
+  "license": "MIT"
+}
